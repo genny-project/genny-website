@@ -1,0 +1,18 @@
+version: '3.1'
+
+services:
+  gennylifewebsite:
+    image: gennyproject/genny-website
+    container_name: gennylife-web
+    environment:
+      - VIRTUAL_HOST=www.example.com
+      - VIRTUAL_PORT=80
+      - LETSENCRYPT_HOST=www.example.com
+      - LETSENCRYPT_EMAIL=admin@example.com
+    networks:
+      - default
+
+networks:
+  default:
+    external:
+      name: website-network
