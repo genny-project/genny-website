@@ -6,7 +6,7 @@ if [ -z "${1}" ]; then
         version="${1}"
 fi
 
-ssssss tag gennyproject/genny-website:${version} gennyproject/genny-website:latest
+docker tag gennyproject/genny-website:${version} gennyproject/genny-website:latest
 
 docker push gennyproject/genny-website:${version}
 docker push gennyproject/genny-website:latest
