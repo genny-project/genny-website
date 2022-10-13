@@ -6,3 +6,4 @@ if [ -z "${1}" ]; then
         version="${1}"
 fi
 docker rmi gennyproject/genny-website:${version}
+docker rmi gennyproject/genny-website:latest
